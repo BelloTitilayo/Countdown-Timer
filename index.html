@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      href="https://fonts.google.com/specimen/Red+Hat+Text"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script src="https://use.fontawesome.com/12d0dd6d32.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Frontend Mentor | Launch countdown timer</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="heading-primary">We're launching soon</h2>
+
+      <div class="timing">
+        <div class="days">
+          <div class="days__number day">14</div>
+          <div class="days__words">Days</div>
+        </div>
+
+        <div class="days">
+          <div class="days__number hour">23</div>
+          <div class="days__words">Hours</div>
+        </div>
+
+        <div class="days">
+          <div class="days__number minute">55</div>
+          <div class="days__words">Minutes</div>
+        </div>
+
+        <div class="days">
+          <div class="days__number second">41</div>
+          <div class="days__words">Seconds</div>
+        </div>
+      </div>
+      <div class="social">
+        <a href="#" class="social__link"
+          ><i class="fa fa-facebook-square social__icon"></i
+        ></a>
+        <a href="#" class="social__link"
+          ><i class="fa fa-instagram social__icon"></i
+        ></a>
+        <a href="#" class="social__link"
+          ><i class="fa fa-pinterest social__icon"></i
+        ></a>
+      </div>
+    </div>
+    <script type="text/javascript">
+      let countDate = new Date("March 21, 2021 00:00:00").getTime();
+
+      function newDay() {
+        let now = new Date().getTime();
+        gap = countDate - now;
+
+        let second = 1000;
+        let minute = second * 60;
+        let hour = minute * 60;
+        let day = hour * 24;
+
+        let d = Math.floor(gap / day);
+        let h = Math.floor((gap % day) / hour);
+        let m = Math.floor((gap % hour) / minute);
+        let s = Math.floor((gap % minute) / second);
+
+        document.querySelector(".day").innerText = d;
+        document.querySelector(".hour").innerText = h;
+        document.querySelector(".minute").innerText = m;
+        document.querySelector(".second").innerText = s;
+      }
+
+      setInterval(function () {
+        newDay();
+      }, 1000);
+    </script>
+  </body>
+</html>

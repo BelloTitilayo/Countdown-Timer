@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 87.5%; }
+  @media only screen and (max-width: 21.9em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  font-weight: 700; }
+
+.container {
+  height: 100vh;
+  background-image: linear-gradient(rgba(30, 31, 41, 0.95), rgba(30, 31, 41, 0.95)), url(../images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  display: grid;
+  grid-template-rows: 0.6fr -webkit-min-content 1fr;
+  grid-template-rows: 0.7fr -webkit-min-content 1fr;
+  grid-template-rows: 0.7fr min-content 1fr;
+  grid-template-columns: minmax(-webkit-min-content, -webkit-max-content);
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 0.6rem;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center; }
+
+.heading-primary {
+  letter-spacing: 5px;
+  color: white;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  text-transform: uppercase; }
+  @media only screen and (max-width: 21.9em) {
+    .heading-primary {
+      font-size: 1rem; } }
+
+.timing {
+  display: flex; }
+
+.days {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center; }
+  .days__number {
+    margin-top: -1rem;
+    margin-right: 2rem;
+    border-radius: 5px;
+    width: 80px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: #fb6087;
+    padding: 1rem 1.1rem;
+    background-image: linear-gradient(to bottom, #343650 50%, #8486a9 50%); }
+    @media only screen and (max-width: 46.9em) {
+      .days__number {
+        width: 75px;
+        font-size: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .days__number {
+        width: 73px; } }
+    @media only screen and (max-width: 30em) {
+      .days__number {
+        width: 70px;
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 25em) {
+      .days__number {
+        width: 60px;
+        font-size: 2rem; } }
+    @media only screen and (max-width: 21.9em) {
+      .days__number {
+        width: 45px;
+        font-size: 1.9rem; } }
+  .days__words {
+    margin-left: -2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #8486a9;
+    letter-spacing: 2.8px;
+    align-self: center;
+    padding-top: 1.5rem; }
+    @media only screen and (max-width: 30em) {
+      .days__words {
+        font-size: 0.7rem; } }
+    @media only screen and (max-width: 25em) {
+      .days__words {
+        font-size: 0.6rem; } }
+
+.social__icon {
+  color: #8486a9;
+  font-size: 1.8rem; }
+
+.social__link {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 1rem; }
