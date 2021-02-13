@@ -51,11 +51,12 @@ body {
   display: flex;
   align-items: center;
   justify-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .timing {
+      margin-right: -0.9rem; } }
   @media only screen and (max-width: 30em) {
     .timing {
-      margin: 0 auto;
-      margin-right: 10%;
-      margin-left: 17%; } }
+      margin-right: -1.9rem; } }
 
 .days {
   display: flex;
@@ -112,7 +113,25 @@ body {
   color: #8486a9;
   font-size: 1.8rem; }
 
-.social__link {
+.social__link:link, .social__link:visited {
   text-decoration: none;
   display: inline-block;
   margin-right: 1rem; }
+
+.social__link:hover, .social__link:active {
+  transform: scale(1.1); }
+
+.copyright {
+  color: white;
+  text-align: center;
+  padding: 1.5rem; }
+
+.colored:link,
+.colored:visited {
+  color: #8486a9;
+  -webkit-animation: all 0.1s;
+  animation: all 0.1s; }
+
+.colored:hover,
+.colored:active {
+  transform: scale(1.05); }
